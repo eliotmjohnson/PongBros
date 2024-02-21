@@ -1,33 +1,33 @@
 <main
-  (document:keydown)="handleKeydown($event)"
-  (document:keyup)="handleKeyup($event)"
-  class="screen-wrapper"
+    (document:keydown)="handleKeydown($event)"
+    (document:keyup)="handleKeyup($event)"
+    class="screen-wrapper"
 >
-  <h1 class="title">Pong Bros</h1>
-  <button class="start-button" (click)="startGame()">Start</button>
-  <div class="screen">
-    <span class="player-one-points">
-      <strong>Player 1</strong>
-      {{ playerOnePoints }}
-    </span>
-    <div
-      [style.top.px]="leftPaddlePos"
-      class="pong-paddle pong-paddle__left"
-    ></div>
-    <span class="middle-line"></span>
-    <div class="middle-circle"></div>
-    <div
-      [style.top.px]="rightPaddlePos"
-      class="pong-paddle pong-paddle__right"
-    ></div>
-    <span class="player-two-points">
-      <strong>Player 2</strong>
-      {{ playerTwoPoints }}
-    </span>
-    <div
-      class="the-ball"
-      [style.top.px]="ballYPos"
-      [style.left.px]="ballXPos"
-    ></div>
-  </div>
+    <h1 class="title">Super Pong Bros</h1>
+    <button class="start-button" (click)="startGame()">Start</button>
+    <div class="screen">
+        <span class="player-one-points">
+            <strong>Player 1</strong>
+            {{ playerOnePoints }}
+        </span>
+        <div
+            [style.top.px]="leftPaddlePos"
+            class="pong-paddle pong-paddle__left"
+        ></div>
+        <span class="middle-line"></span>
+        <div class="middle-circle"></div>
+        <div
+            [style.top.px]="rightPaddlePos"
+            class="pong-paddle pong-paddle__right"
+        ></div>
+        <span class="player-two-points">
+            <strong>Player 2</strong>
+            {{ playerTwoPoints }}
+        </span>
+        <div
+            class="the-ball"
+            [style.top.px]="ballYPos"
+            [style.left.px]="ballXPos"
+        ></div>
+    </div>
 </main>
