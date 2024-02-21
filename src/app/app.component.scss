@@ -1,0 +1,119 @@
+.screen-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+        font-size: 5rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .start-button {
+        height: 2.5rem;
+        width: 4.5rem;
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        border: none;
+        border-radius: 2rem;
+        background-color: black;
+        color: white;
+        transition: background-color .2s, color .2s, border .2s;
+        cursor: pointer;
+
+        &:hover {
+            color: black;
+            border: 2px solid black;
+            background-color: white;
+        }
+    }
+
+    .screen {
+        position: relative;
+        width: 70rem;
+        height: 700px;
+        border: 8px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .pong-paddle {
+            height: 4rem;
+            width: .8rem;
+            background-color: black;
+            border: 1px solid rgb(255, 255, 255);
+
+            &__left {
+                position: absolute;
+                left: 0;
+                transform: translateY(-50%);
+            }
+
+            &__right {
+                position: absolute;
+                right: 0;
+                transform: translateY(-50%);
+            }
+        }
+
+        .middle-line {
+            height: 100%;
+            border: 4px solid black;
+            box-sizing: border-box;
+        }
+
+        .middle-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            height: 10rem;
+            width: 10rem;
+            background-color: transparent;
+            border: 8px solid black;
+            border-radius: 100%;
+        }
+    }
+}
+
+.player-one-points {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 0;
+    top: -7rem;
+
+    strong {
+        font-size: 2rem;
+    }
+}
+
+.player-two-points {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 4rem;
+    gap: .5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    right: 0;
+    top: -7rem;
+    
+    strong {
+        font-size: 2rem;
+    }
+}
+
+.the-ball {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background-color: black;
+}
